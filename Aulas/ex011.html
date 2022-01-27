@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício</title>
+</head>
+<body>
+    <h1>Pergunta!</h1>
+    Você é Estrageiro? <input type="text" name="país" id="país">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular(){
+            var país = window.document.querySelector('input#país')
+            
+            var res = window.document.querySelector('div#res')
+            var vel = (país.value)
+        
+            if (vel == 'brasil'){
+                res.innerHTML=`Você é <strong>Brasileiro!</strong>`
+            }else {
+                res.innerHTML=`Você é <strong>Estrageiro!</strong>`
+            }
+            res.innerHTML+= `<p>Então você veio do <strong> ${vel}</strong>, que legal!</p>`
+        }
+    </script>
+
+</body>
+</html>
